@@ -1,0 +1,1 @@
+[{"USE \"nombre_dela_base_de_datos\" ": " entra a esa base de datos.", "CREATE DATABASE \"nombre_dela_base_de_datos\" ": " crea esa base de datos.", "DROP DATABASE \"nombre_dela_base_de_datos\" ": " chapea la base de datos.", "DROP TRIGGER \"nombre_del_trigger\" ": " chapea el trigger."}]
