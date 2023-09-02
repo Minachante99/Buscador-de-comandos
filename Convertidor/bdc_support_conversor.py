@@ -43,7 +43,7 @@ def run():
 		
 		
 if __name__ == '__main__':
-	sys.path.append('/storage/emulated/0/APLP!!!!/Estudiar!!/PyTools')
+	sys.path.append(r'C:\Programacion\Proyectos\Tools')
 	import files_parser_class
 	run()
 	
