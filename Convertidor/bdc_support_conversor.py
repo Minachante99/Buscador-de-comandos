@@ -1,6 +1,6 @@
-'''Programa frontend que importa la clase conversor, añadiendo la direccion de PyTools al path de python, y tomando los dos inputs basicos'''
+'''Programa frontend que importa la clase files_parser, añadiendo la direccion de PyTools al path de python y le pasa funciones.'''
 
-import sys,os
+import sys,os,conversores
 
 def welcome():
 		print('''
@@ -19,13 +19,15 @@ def run():
 	
 	#primera eleccion, decide con cual clase inicializar 
 	while 1:
-		type = input('Choose: ')
+		opt = input('Choose: ')
 		#crea la instancia en la respectiva clase
-		if type in ['1','2']:
-			if type == '1':  
-				conversor = files_parser_class.Txt(os.path.realpath(__file__))
-			elif type == '2':
-				conversor = files_parser_class.Json_Fixer(os.path.realpath(__file__))
+		if opt in ['1','2']:
+			if opt == '1':  
+				conversor = files_parser_class.FilesParser(os.path.realpath(__file__))
+				func,type = conversores.txt_parser,'txt'
+			elif opt == '2':
+				conversor = files_parser_class.FilesParser(os.path.realpath(__file__))
+				func,type = conversores.json_parser,'json'
 			break
 		else : print('Vamo a aclararnos.\n')
 	
@@ -33,17 +35,15 @@ def run():
 	files_path = input('\nTirame direccion: ')
 	
 	#funcion principal
-	conversor.main(files_path)
+	conversor.main(func,files_path,type)
 	print('\nDone\n')
 	
 	#opcional, para mostrar los resultados, de estar en la lista interna de la clase significa que se proceso correctamente
-	print('Results:')
-	for x in conversor.results:
-		print(x)
+	conversor.show_results()
 		
 		
 if __name__ == '__main__':
-	sys.path.append(r'C:\Programacion\Proyectos\Tools')
+	sys.path.append('C:\Programacion\Proyectos\Tools')
 	import files_parser_class
 	run()
 	
