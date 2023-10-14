@@ -9,6 +9,7 @@ Welcome mi pana. A que vas a convertir:
 	
 1- Txt a Json
 2- Fixear los jsones
+3- Json a Txt
 	
 	''')
 
@@ -21,13 +22,16 @@ def run():
 	while 1:
 		opt = input('Choose: ')
 		#crea la instancia en la respectiva clase
-		if opt in ['1','2']:
+		if opt in ['1','2','3']:
 			if opt == '1':  
 				conversor = files_parser_class.FilesParser(os.path.realpath(__file__))
 				func,type = conversores.txt_parser,'txt'
 			elif opt == '2':
 				conversor = files_parser_class.FilesParser(os.path.realpath(__file__))
 				func,type = conversores.json_parser,'json'
+			elif opt=='3':
+				conversor=files_parser_class.FilesParser(os.path.realpath(__file__))
+				func,type=conversores.json_txt,'json'
 			break
 		else : print('Vamo a aclararnos.\n')
 	
@@ -43,7 +47,7 @@ def run():
 		
 		
 if __name__ == '__main__':
-	sys.path.append('C:\Programacion\Proyectos\Tools')
+	sys.path.append('C:\\Programacion\\Proyectos\\Tools')
 	import files_parser_class
 	run()
 	

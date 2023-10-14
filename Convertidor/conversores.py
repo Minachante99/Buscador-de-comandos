@@ -35,3 +35,15 @@ def json_parser(files_path,res_path):
 		with open(res_path + os.sep + name, 'w') as result:
 			json.dump([dictio], result)
 		return name
+		
+#to txt function
+def json_txt(files_path,res_path):
+	with open(files_path) as file:
+		dictio = json.load(file)[0]
+	texto = ''
+	for x,y in dictio.items():
+		texto+= x + ' - ' + y + '\n\n'
+	name = (os.path.split(files_path)[1]).split('.')[0] + '.txt'
+	with open(res_path+os.sep+name,'w') as txt:
+		txt.write(texto)
+	return name

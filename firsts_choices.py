@@ -7,7 +7,7 @@ Sobre que buscas:
 1- Python
 2- Html
 3- Consola
-4- MySQL
+4- PostgreSQL
 
 Exit - termina el programa  
     
@@ -25,7 +25,7 @@ Exit - termina el programa
 			elif eleccion_1 == "3":
 				eleccion_1 = "Consola"
 			elif eleccion_1 == "4":
-				eleccion_1 = "MySQL"
+				eleccion_1 = "PostgreSQL"
 			break
 		else:
 			print("Chama aclarate\n")
