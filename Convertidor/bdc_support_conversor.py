@@ -47,7 +47,7 @@ def run():
 		
 		
 if __name__ == '__main__':
-	sys.path.append('C:\\Programacion\\Proyectos\\Tools')
+	sys.path.append('D:\\Programacion\\Proyectos\\Tools')
 	import files_parser_class
 	run()
 	
