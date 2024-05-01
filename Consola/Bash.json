@@ -1,1 +1,30 @@
-[{"man \"nombre_delcomando\" ": " te dice todo lo que hace el comando(demasiado), a traves de https://tldr.sh. descargar para usar tldr \"nombre_del_comando\" que te resume.Con \"q\"se sale del manual.", "ls ": " te lista todo lo que hay en la carpeta, si se usa con \"-al\" te da mas informacion; -a: muestra archivos ocultos(tienen un pto delante) .", "mkdir ": " crea una carpeta.", "rmdir ": " elimina una carpeta si esta vacia, sino, debes usar \"rm -rf\".", "cd ": " para moverse.", "pwd ": " te da la direccion de donde estas(en las carpetas chama).", "mv ": "  para mover un archivo, el equivalente en windows es move.", "cp ": " copiar archivos, si es una carpeta que contiene archivos se debe usar con -r", "open ": " abrir un archivo o carpeta (\".\" abre el directorio actual)", "touch \"nombre_del_nuevo_archivo\" ": " crea un archivo.", "ln _s \"nombre_del_archivo\" \"nombre_del_acceso_directo\" ": " crea un acceso directo suave, sin ls crea uno duro.", "alias \"nombre_del_nuevo_comando\" = comando ": " puedes invocar los comandos bajo aliases.", "less \"nombre_del_archivo\" ": " te muestra el contenido del archivo.", "grep \"frase_que_quieres_buscar\" \"nombre\"del_archivo\" ": " busca la frase en el archivo.", "du ": " te dice el tama\u00f1o de la carpeta en bytes(-m:  en mb, -g: en gb, *: da la propiedad de cada archivo, -h: lo da en una notacion legible).", "traceroute ": " recoge informacion por cada lugar que pase ese pinga.", "history ": " muestra el historial de comandos utilizados.", "echo \"algo\" ": " imprime \"algo\" en la terminal; echo + text >> archivo: escribe texto en archivo.", "nano \"nombre_del_archivo\"": "para modificar archivos.", "cat \"nombre_del_archivo\"": "muestra el contenido del archivo.", "clear": "limpia la linea de comandos.", "wc": "permite contar las palabras de un archivo, -l devuelve la canidad de lineas de ese archivo.", "head or tail": "muestra las primeras o ultimas lineas de un archivo respectivamente.", "pip install 'nombre_del_paquete'": "instalador de paquetes de python; --upgrade nombre : actualiza el paquete.", "scrapy startproject 'nombre'": "Crea un subdirectorio para los archivos del proyecto;scrapy runspider 'nombre' : levanta el spider."}]
+[
+  {
+    "man \"nombre_delcomando\" ": " te dice todo lo que hace el comando(demasiado), a traves de https://tldr.sh. descargar para usar tldr \"nombre_del_comando\" que te resume.Con \"q\"se sale del manual.",
+    "ls ": " te lista todo lo que hay en la carpeta, si se usa con \"-al\" te da mas informacion; -a: muestra archivos ocultos(tienen un pto delante) .",
+    "mkdir ": " crea una carpeta.",
+    "rmdir ": " elimina una carpeta si esta vacia, sino, debes usar \"rm -rf\".",
+    "cd ": " para moverse.",
+    "pwd ": " te da la direccion de donde estas(en las carpetas chama).",
+    "mv ": "  para mover un archivo, el equivalente en windows es move.",
+    "cp ": " copiar archivos, si es una carpeta que contiene archivos se debe usar con -r",
+    "open ": " abrir un archivo o carpeta (\".\" abre el directorio actual)",
+    "touch \"nombre_del_nuevo_archivo\" ": " crea un archivo.",
+    "ln _s \"nombre_del_archivo\" \"nombre_del_acceso_directo\" ": " crea un acceso directo suave, sin ls crea uno duro.",
+    "alias \"nombre_del_nuevo_comando\" = comando ": " puedes invocar los comandos bajo aliases.",
+    "less \"nombre_del_archivo\" ": " te muestra el contenido del archivo.",
+    "grep \"frase_que_quieres_buscar\" \"nombre\"del_archivo\" ": " busca la frase en el archivo.",
+    "du ": " te dice el tama\u00f1o de la carpeta en bytes(-m:  en mb, -g: en gb, *: da la propiedad de cada archivo, -h: lo da en una notacion legible).",
+    "traceroute ": " recoge informacion por cada lugar que pase ese pinga.",
+    "history ": " muestra el historial de comandos utilizados.",
+    "echo \"algo\" ": " imprime \"algo\" en la terminal; echo + text >> archivo: escribe texto en archivo.",
+    "nano \"nombre_del_archivo\"": "para modificar archivos.",
+    "cat \"nombre_del_archivo\"": "muestra el contenido del archivo.",
+    "clear": "limpia la linea de comandos.",
+    "wc": "permite contar las palabras de un archivo, -l devuelve la canidad de lineas de ese archivo.",
+    "head or tail": "muestra las primeras o ultimas lineas de un archivo respectivamente.",
+    "pip install 'nombre_del_paquete'": "instalador de paquetes de python; --upgrade nombre : actualiza el paquete.",
+    "scrapy startproject 'nombre'": "Crea un subdirectorio para los archivos del proyecto;scrapy runspider 'nombre' : levanta el spider.",
+    "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres"
+  }
+]

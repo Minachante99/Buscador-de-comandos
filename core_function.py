@@ -44,7 +44,7 @@ def core_function(eleccion_1, eleccion_2, seleccion_0):
 		subject = [subject]
 		#agregando lo nuevo
 		with open(way, "w") as file_new:
-			json.dump(subject, file_new)
+			json.dump(subject, file_new,indent=2)
 		print("Hecho chama")
 
 	else:

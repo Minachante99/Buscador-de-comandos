@@ -33,7 +33,7 @@ def json_parser(files_path,res_path):
 				dictio[clave] = dic[clave]
 		name = os.path.split(files_path)[1]
 		with open(res_path + os.sep + name, 'w') as result:
-			json.dump([dictio], result)
+			json.dump([dictio], result,indent=2)
 		return name
 		
 #to txt function
