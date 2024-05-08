@@ -15,9 +15,8 @@
     "import glob": "para buscar archivos dentro se la carpeta dondw ae ejecuta el codigo, glob.glob('arg') : devuelve una lista con todos los nombres de archivos que encajan.",
     "import time": "turbiedad, time.sleep(#) : detiene el proceso segun el numero de segundos introducidos.",
     "import __thread": "para trabajar con threads(lightweight)(ronnie), creando varios threads en un mismo programa llamando funciones dentro de ellos.Todos comparten el mismo standard output",
-    "import threading": "se usa para manejar threads a alto nivel, que en muchos de sus casos usa internamente a _thread. La gran diferencia es que este es usado en OOP, para customizar clases, para heredar de una clade Thread, donde podemos customizar su __init__ y la funcion run(), que mediante un metodo start llama a run.",
+    "import threading": "se usa para manejar threads a alto nivel, que en muchos de sus casos usa internamente a _thread. La gran diferencia es que este es usado en OOP, para customizar clases, para heredar de una clase Thread, donde podemos customizar su __init__ y la funcion run().",
     "import queue": "es un bolsillo dimensional que es usafdo por los threads para leer y guardar cosas. Metodos en 6.",
-    "import webbrowser": "par abrir archivos html con el browser predeterminado del dispositivo. webbrowser.open(file) : abre el archivo; webbrowser.open_new(path): con direccion exaccta",
     "import pandas": "pandas se usa pra procesar datos utilizando de fondo numpy.",
     "import numpy": "para trabajar con numeros, ta potente.",
     "import matplotlib.pyplot": "para visualizar datos.",
@@ -30,15 +29,13 @@
     "import mlxtend": "so far para plotear decisions boundaries de los modelos(zona de decisiones confusas ggg); mlxtend.plotting.plot_decision_regions(X,y,clf): en clf especificamos la instancia de modelo.",
     "import xgboost": "para trabajar con XGBClassifier() el cual es un ensemble model mejorado.",
     "import nltk": "la libreria mas usada para analisis de sentimientos en Natural Language Processing(NLP),mas en wb and nlp.",
-    "import ast": "literal_eval(arg) - so far: le quita las comillas a arg(no se si hay que importar el modulo ast).",
     "import hyperopt": "libreria de optimizacion de hyperparameters, se el modulo hyperopt.hp.(uniform,quniform,loguniform): para seleccionar valores entre un min/max.",
     "import mlt_class": "contiene dos clases principales,XGBs(arboles xgboost) y SVMs(SVMs, normal y linear) que se alimentan en la clase general MlT, al iniciar la clase hay que pasarle features and targets, y al utilizar una de las funciones se le debe pasar tipo de problema('c' por clasificacion y 'r' de regresion); escorer default es f1 y mae respectivamente; average default binario, 'w' para weighteado, para mas leer documentacion.",
     "import bs4": "libreria para parsear documentos web(html,xml,json,etc).Mas en web scraping module.",
     "import scrapy": "framework para web scraping, hace la vida mas facil crear crawlers.",
     "import psycopg2": "para trabajar con postgresql desde python, psycopg2.connect(host,database,user,password) conecta con el server; conection_obj.cursor() - para crear el cursor; las query que uno haga se guardan en el cursor; cursor_obj.excecute(query) - para ejecutrar querys que despues se pueden obtener en cursor_obj.fetch_one() or fetch_all(); conection_obj.commit() para ejucutar los cambios hechos en la db, conn_obj.close() para cerrar la conexion.",
-    "import io": "para rabajar con strings, StringIO clase que permite crear instancias de strings y los trata como files para pasarle otras funciones que solo tratan con files.",
     "import requests": "para trabajar con internet,mas en web scraping.",
     "import selenium": "libreria de web scrapping.",
-    "import pytesserac": "para trabajar con imagenes; image_to_string(arg) - saca el texto de una imagen. "
+    "import Wget": "para hacer descargas(hasta ahora); Wget.download(url,path) - para descargar un archivo."
   }
 ]

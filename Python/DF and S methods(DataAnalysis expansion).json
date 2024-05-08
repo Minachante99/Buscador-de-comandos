@@ -31,17 +31,14 @@
     "s.std()": "halla el Standard deviation que es la ra\u00edz cuadrada del promedio.",
     "inst.var()": "calcula la varianza.",
     "groupby_object.apply(func)": "le pasa una funcion a cada file de la instancia, se usa con lambda.",
-    "inst.idxmax()": "pape, hasta ahora solo lo he visto usar en indices jerarquicos asi que para normales buscar documentacion; devuelve el valor mas repetido de ese indice, es decir, para un indice que tiene varias jerarquias devuelve el valor mas frecuente de segundo orden.(tiza)",
+    "inst.idxmax()": "pape, hasta ahora solo lo he visto usar en indices jerarquicos asi que para normales buscar documentacion; devuelve el valor mas repetido de ese indice, es decir, para un indice que tiene varias jerarquias devuelve el valor mas frecuente de segundo orden.(tiza); df.idxmin hace lo mismo pero con minimo.",
     "to_frame()": "convierte una serie a df.",
     "(df or s).squeeze()": "metodo que se usa cuando no se sabe si lo que se esta importando es una dataframe or a series pero si se sabe que lo que tiene es una sola columna, rebaja el objeto a una serie.",
-    "df.select_dtypes(include=)": "selecciona las columnas con tipo especificado en include; 'number' para incluir o excluir odo lo que sea numero(int,float).",
-    "inst.map({arg1:arg2})": "se usa para remplazar cosas, mapea todo las claves del dic y las sustituye por arg2, es como el replace pero peligroso, se chapear cosas y mete nan andarse con ojo.",
+    "df.select_dtypes(include=)": "selecciona las columnas con tipo especificado en include; 'number' para incluir o excluir odo lo que sea numero(int,float)",
     "df.agg({col: metodo} or function or [functions])": "es para pasarle diferentes metodos a cada una de las columnas en un groupby, o pasarle a una o varias columnas una funcion, es mas para columnas, a diferencia de apply.",
-    "df.explode(col)": "so far: coge una columna que contenga listas y las saca y separa cada cosa de adentro. ",
     "df.transform(func)": "le pasa una funcion pero lo lleva al shape del dataset en el que se quiera utilizar el resultado.",
-    "df.idxmin()": "lo mismo de idxmax pero para minimo.",
     "df.plot(kind='hexbin')": "crea un hexagonal binning que se usa como un scatterplot para comparar dos variables num\u00e9ricas pero para cuando hay demasiados datos que no se hace legible un scatter, poniendo como puntos de presi\u00f3n representando los bins como hex\u00e1gonos describiendo la cantidad de puntos que contiene.",
-    "df1.append(df2)": "a\u00f1ade df2 al final de df1, deben teneer la misma estructra.",
-    "df.to_json()": "salva el dataframe a json."
+    "df.to_json()": "salva el dataframe a json.",
+    "inst.sum()": "para sumar, axis=1 para hacerlo horizontalmente."
   }
 ]
