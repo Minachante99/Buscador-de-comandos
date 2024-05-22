@@ -5,7 +5,7 @@
     "import math ": " math.sin(variable) : halla el seno de \"variable\", math.sqrt(variable) : halla raiz cuadrada de \"variable\", math.pi: invoca pi para trabajar con el",
     "import re ": " re.search(argumento, variable) : busca \"argumento\" en la variable especificada, re.findall(argumento, variable) : devuelve una lista de todos los strings \"argumento\" encontrados en variable;re.compile() - para compilar una regex y pasarselas a otras funciones.",
     "import urllib": " importa la libreria urllib para trabajar co internet, mas en web scraping.",
-    "import Json ": " json.dump(\"argumento_1\", \"argumento_2\"): guarda \"argumento_1\" en el archivo \"argumento_2\", json.load(\"argumento\") : carga \"argumento\" previamente cargado con open() y devuelve todo lo dentro del json",
+    "import json ": " json.dump(\"argumento_1\", \"argumento_2\"): guarda \"argumento_1\" en el archivo \"argumento_2\", json.load(\"argumento\") : carga \"argumento\" previamente cargado con open() y devuelve todo lo dentro del json",
     "import sys": "Se utiliza principalmente en programaci\u00f3n orientada al sistema(M\u00e1s sobre el tema en SystemProgramming).",
     "import datetime": "datetime.datetime.now() : retorna la fecha y hora actual, datetime.date() : acepta fechas para hacer calculos,datetime.date.today() : devuelve la fecha actual",
     "import this": "el zen de python.",
@@ -36,6 +36,7 @@
     "import psycopg2": "para trabajar con postgresql desde python, psycopg2.connect(host,database,user,password) conecta con el server; conection_obj.cursor() - para crear el cursor; las query que uno haga se guardan en el cursor; cursor_obj.excecute(query) - para ejecutrar querys que despues se pueden obtener en cursor_obj.fetch_one() or fetch_all(); conection_obj.commit() para ejucutar los cambios hechos en la db, conn_obj.close() para cerrar la conexion.",
     "import requests": "para trabajar con internet,mas en web scraping.",
     "import selenium": "libreria de web scrapping.",
-    "import Wget": "para hacer descargas(hasta ahora); Wget.download(url,path) - para descargar un archivo."
+    "import wget": "para hacer descargas(hasta ahora); wget.download(url,out) - para descargar un archivo;out es para la carpeta de salida.",
+    "import seleniumbase": "es el todo en uno de selenium; seleniumbase.Driver(uc=True) devuelve el driver con chromne instanciado utilizando el undetected chomedriver."
   }
 ]
