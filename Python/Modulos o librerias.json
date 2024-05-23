@@ -4,7 +4,6 @@
     "import string ": " string.punctuation : signos de puntuacion, string.ascii_upper(lower)case, para trabajar con el abecedario",
     "import math ": " math.sin(variable) : halla el seno de \"variable\", math.sqrt(variable) : halla raiz cuadrada de \"variable\", math.pi: invoca pi para trabajar con el",
     "import re ": " re.search(argumento, variable) : busca \"argumento\" en la variable especificada, re.findall(argumento, variable) : devuelve una lista de todos los strings \"argumento\" encontrados en variable;re.compile() - para compilar una regex y pasarselas a otras funciones.",
-    "import urllib": " importa la libreria urllib para trabajar co internet, mas en web scraping.",
     "import json ": " json.dump(\"argumento_1\", \"argumento_2\"): guarda \"argumento_1\" en el archivo \"argumento_2\", json.load(\"argumento\") : carga \"argumento\" previamente cargado con open() y devuelve todo lo dentro del json",
     "import sys": "Se utiliza principalmente en programaci\u00f3n orientada al sistema(M\u00e1s sobre el tema en SystemProgramming).",
     "import datetime": "datetime.datetime.now() : retorna la fecha y hora actual, datetime.date() : acepta fechas para hacer calculos,datetime.date.today() : devuelve la fecha actual",
