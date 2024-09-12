@@ -40,6 +40,8 @@
     "__and__ and(ggg) __or__": "overloading operator, se utilozan para pescar interseccion y union respectivamente.",
     "staticmethod(method)": "acepta un static method como argumento(method que no se le pasa una instancia y que solo puede ser llamado mediante NombreDeClase.method()) y hace que este puede ser llamado mediante instancias tambien. Se define a nivel de metodo(al mismo nivel que se escriben las funciones en una clase(method = staticmethod(method). ",
     "exec(string)": "ejecuta string como si fuese python code.",
-    "breakpoint()": "funcion que permite hacer una pausa en el codigo e interactuar con el, es para debuguear basicamente."
+    "breakpoint()": "funcion que permite hacer una pausa en el codigo e interactuar con el, es para debuguear basicamente;con continue en la consola el programa se reanuda.",
+    "any()": "le pasa bool(x) a todo los elementos del iterable y devuelve True si aunque sea hay un verdadero, False si no hay ninguno.",
+    "all()": "le pasa bool(x) a todos los elementos del iterable, devuelve True si todos son 1 o False si hay aunque sea un False."
   }
 ]

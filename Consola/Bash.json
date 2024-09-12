@@ -25,6 +25,7 @@
     "head or tail": "muestra las primeras o ultimas lineas de un archivo respectivamente.",
     "pip install 'nombre_del_paquete'": "instalador de paquetes de python; --upgrade nombre : actualiza el paquete.",
     "scrapy startproject 'nombre'": "Crea un subdirectorio para los archivos del proyecto;scrapy runspider 'nombre' : levanta el spider.",
-    "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres"
+    "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres",
+    "tensorboard --logdir folder": " para inicializar un localhost con tensorboard."
   }
 ]
