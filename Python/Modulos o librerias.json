@@ -2,7 +2,7 @@
   {
     "import random ": " random.randint(range) : selecciona un int random in \"range\", random.choice(variable) : selecciona pseudoaleatoriamente;random.seed(arg) - para agregarle una semilla inicial.",
     "import string ": " string.punctuation : signos de puntuacion, string.ascii_upper(lower)case, para trabajar con el abecedario",
-    "import math ": " math.sin(variable) : halla el seno de \"variable\", math.sqrt(variable) : halla raiz cuadrada de \"variable\", math.pi: invoca pi para trabajar con el",
+    "import math ": " math.sin(variable) : halla el seno de \"variable\", math.sqrt(variable) : halla raiz cuadrada de \"variable\", math.pi: invoca pi para trabajar con el;math.ceil(arg): redondea al próximo integer",
     "import re ": " re.search(argumento, variable) : busca \"argumento\" en la variable especificada, re.findall(argumento, variable) : devuelve una lista de todos los strings \"argumento\" encontrados en variable;re.compile() - para compilar una regex y pasarselas a otras funciones.",
     "import json ": " json.dump(\"argumento_1\", \"argumento_2\"): guarda \"argumento_1\" en el archivo \"argumento_2\", json.load(\"argumento\") : carga \"argumento\" previamente cargado con open() y devuelve todo lo dentro del json",
     "import sys": "Se utiliza principalmente en programaci\u00f3n orientada al sistema(M\u00e1s sobre el tema en SystemProgramming).",
@@ -18,7 +18,7 @@
     "import numpy": "para trabajar con numeros, ta potente.",
     "import matplotlib.pyplot": "para visualizar datos.",
     "import seaborn": "para visualizar data, pone matploylib mas bonito(uwu).",
-    "import PIL": "para trabajar con imagenes; PIL.Image.open(arg) cargar la foto.",
+    "import PIL": "para trabajar con imagenes; PIL.Image.open(arg) cargar la foto;PIL.ImageTk.PhotoImage(file) - para cargar imágenes con PIL; PIL.ImageTk.Image.open()_obj.thumbnail(size) - para crear thumbnails con el size(tupla) especificado, obj.save(path) para salvarla.",
     "import sklearn": "importa scikit-learn, para trabajar con machine learning. Revisar adentro todas las ramas y clases en la cheat sheat.",
     "import thefuzz": "para turbiedad(so far); thefuzz.fuzz.partial_ratio(arg1,arg2) : se usa para calcular Levenshtein distance between two cadenas de caracteres(strings) calculando el peque\u00f1o con respeco al grande.",
     "import scipy": "libreria para tallas cienificas; stats.linregress(x,y) regresion lineal entre esas dos variables para estimar a futuro; scipy.stats.trim_mean(obj,percent) : para hallar el trimmed mean que es quitar un porcentaje de datos a cada lado(mas pequenos y mas grandes) siendo esto mas robusto que el promedio normal; scipy.stats.probplot(data,plot= ax) - para plotear la distribucion normal, en plot hay que especificar el subplot.",
