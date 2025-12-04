@@ -17,7 +17,7 @@ def txt_parser(files_path,res_path):
 	name = os.path.split(files_path)[1]
 	name = name[:name.find('.')+1] + 'json'
 	with open(res_path + os.sep + name,'w') as result:
-		json.dump([dictio],result)
+		json.dump([dictio],result,indent=2)
 	return name
 		
 #json fixer

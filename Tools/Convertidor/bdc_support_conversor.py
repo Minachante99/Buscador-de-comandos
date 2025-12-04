@@ -1,6 +1,6 @@
 '''Programa frontend que importa la clase files_parser, añadiendo la direccion de PyTools al path de python y le pasa funciones.'''
 
-import sys,os,conversores
+import os,conversores,files_parser_class
 
 def welcome():
 		print('''
@@ -47,8 +47,6 @@ def run():
 		
 		
 if __name__ == '__main__':
-	sys.path.append('D:\\Programacion\\Proyectos\\Tools')
-	import files_parser_class
 	run()
 	
 	

@@ -1,38 +1,108 @@
-""""Un buscador de comandos dentro de mis apuntes. Llama las elecciones y le pasa los resultados a la core_function."""
+""""Un buscador de comandos dentro de mis apuntes. Segun las elecciones busca,testea,agrega contenido,actualiza o convierte nuevos json 
+la core_function."""
+ 
+from core_function import core_function as cf
+import os
 
-import firsts_choices,_thread as thread,queue
-import core_function as cf
 
-dipocket = queue.Queue()
+def seleccionador(opciones,isFolder=0):
+	"""Funcion que agiliza las selecciones.En caso de ser una carpeta 
+	le pasa listdir y toma eso como opciones"""
+	#en caso de ser una carpeta le pasa listdir y le limpia las extensiones(asume que todo tiene extension)
+	if isFolder:
+		try:
+			contenido = os.listdir(os.path.realpath('.') + os.sep + opciones)
+			opciones = [file.split('.')[0] for file in contenido]
+			if not opciones:
+				print('Something went wrong.No archivos en esa carpeta.')
+				exit()
+		except FileNotFoundError:
+			print('No encuentro esa direccion.')
+			exit()
+	#printea las opciones y se encarga de que es correcta la seleccion
+	for i,opt in enumerate(opciones):
+		print(f'{i+1}- {opt}')
+	rango= range(len(opciones))
+	while 1:
+		eleccion = input('\nSeleccione: ')
+		try:
+			eleccion = int(eleccion) - 1
+			if (eleccion) in rango: break
+			else :
+				print('\nAclarate papi.\n')
+				continue
+		except ValueError:
+			if eleccion.lower() == 'exit' : exit()
+			else:
+				print('Tiene que ser un entero o la palabra "Exit" para salir.\n')
+	return opciones[eleccion]
 
-def subjects(carpeta):
-	import os
-	way = os.path.split(os.path.realpath(__file__))[0]
-	dipocket.put(os.listdir(way+os.sep+carpeta))
+
+def main():
+	"""Funcion principal de la version de consola,donde se hacen las elecciones para luego llamar
+	a la funcion core.Printea los resultados de las busquedas"""
+	#primera eleccion, modulo
+	print('\nSobre que modulo buscas:\n')
+	full_path = 'Modulos' #variable que se va construyendo hasta que tiene la direccion del archivo
+	modulo = seleccionador(full_path,isFolder=1)
+	#segunda eleccion, action
+	print('\nQue vas a hacer:\n')
+	actions = ['Buscar','Testear','Agregar']
+	accion = seleccionador(actions)
+	#ultima eleccion,eligiendo tema segun modulo
+	print('\nSobre que tema:\n')
+	full_path+= os.sep + modulo
+	tema = seleccionador(full_path,isFolder=1)
+	full_path+= os.sep + tema + '.json'
 	
-def run():
-    while 1:
-    	#primeras elecciones
-    	eleccion_1 = firsts_choices.choice_1()
-    	#lanza un thread para que escanee la carpeta de fondo
-    	thread.start_new_thread(subjects,(eleccion_1,))
-    	eleccion_2 = firsts_choices.choice_2()
-    	#lee el dipocket y le pasa el resultado a la proxima eleccion
-    	while 1:
-    		try:
-    			lista = dipocket.get(block=False)
-    		except queue.Empty:
-    			import time
-    			time.sleep(0.25)
-    		else: break
-    	eleccion_3 = firsts_choices.choice_3(lista)
-    	#funcion de parseo
-    	cf.core_function(eleccion_1, eleccion_2, eleccion_3)
-    	#empezar de nuevo o no
-    	x = input('\nDo you wanna start again?(Y or N): ') 
-    	if x in ['y','Y'] : pass
-    	else: break      
+	#recopilando ultima informacion y llamando la cf
+	if accion=='Agregar':
+		#si se eligio agregar
+		agrega_key = input("\nAgrega clave: ")
+		agrega_value = input ("Agrega descripcion: ")
+		cf(accion,full_path,clave=agrega_key,valor=agrega_value)
+		print("\nHecho chama")
+	elif accion=='Buscar':
+		#si se eligio buscar
+		expresion = input("\nIntroduzca expresion: ")
+		results,sugg = cf(accion,full_path,word=expresion)
+		for clave,valor in results.items():
+			print(f'\n{clave} : {valor}')
+		#printe sugerencias
+		if len(sugg)!=0:
+			print('\n\nTambien podria interesarte: ')
+			for clave,valor in sugg.items():
+				print(f'\n{clave} : {valor}')
+		print(f'\nResultados encontrados: {len(results)}.\nSugerencias encontradas: {len(sugg)}.')
+	else:
+		#testear
+		commands = cf(accion,full_path)
+		for com in commands:
+			print('\n' + com)
+
 
 if __name__ == "__main__":
-	run()
+	#algo parecido a un menu, desde donde se puede lanzar el gui u otro tool, o proseguir con el bdc
+	options = ['Buscador de Comandos','Version GUI','Update','Conversor']
+	print('A que vienes: \n')
+	menu = seleccionador(options)
+	if menu == 'Conversor':
+		#anade el path del convertidor al sys.path y lo inicia
+		from sys import path as sys_path
+		conv_path = os.path.abspath('.') + os.sep + 'Tools' + os.sep + 'Convertidor'  
+		sys_path.append(conv_path)
+		import bdc_support_conversor as bdc
+		bdc.run()
+	elif menu == 'Update':
+		from Tools.Updater import updater
+		updater.main('D:\Programacion\Proyectos\Buscador de comandos\Modulos','https://raw.githubusercontent.com/Minachante99/Buscador-de-comandos/main/Modulos/')
+	elif menu == 'Version GUI':
+		print('En mantenimiento papiiiiiiii.Comiiiiiiiiiing Sooooooooooon')
+		exit()
+	elif menu == 'Buscador de Comandos':
+		while 1:
+			main()
+			if input('\nDo you want to continue(y\\n): ') not in ['Y','y']: break
+
+			
  

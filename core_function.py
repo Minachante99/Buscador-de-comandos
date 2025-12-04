@@ -1,57 +1,51 @@
-"""Funcion principal. Le pasa las elecciones anteriores para elegir carpeta y tema donde buscar, carga el Json y busca dentro de las claves del diccionario mediante una expresion regular o agrega datos"""
+"""Script que contiene la core_function, la cual es usada por el main o el gui."""
 
-import json,os
+import json,random
 
-def core_function(eleccion_1, eleccion_2, seleccion_0):  
-	
-	new_file,el_boleano = seleccion_0[0],seleccion_0[1]      
- 
+def core_function(accion,full_path,**kargs):      
+	"""Funcion principal. Le pasa las elecciones anteriores para elegir carpeta y tema donde buscar, 
+carga el Json y busca dentro de las claves del diccionario o agrega datos"""
     #abriendo j_sones
-	way = os.path.split(os.path.realpath(__file__))[0]
-	way = way+os.sep+eleccion_1 + os.sep + new_file
 	try:
-		with open(way) as file:
-		  subject = json.load(file)[0]
+		with open(full_path) as file:
+			subject = json.load(file)[0] #subject es un diccionario
 	except FileNotFoundError:
-	       print("Chama no encuentro los J_sones.\n")
-	       exit()
-	       
-	#mostrar todo si se usa " * "
-	if eleccion_2 == "1" and el_boleano == True:
-		for key in subject:
-        		print("\n" + key,":", subject[key])
-    
-    #buscar algo
-	elif eleccion_2 == "1" and el_boleano == False:
-		searcher = input("Introduzca expresion: ")
-		searcher = searcher.replace(" ", "")
-		counts = 0
-        #parseandolo
-		for key in subject:
-				if searcher in key:
-					counts += 1
-					print("\n" + key + " :" + subject[key])
-		if counts == 0:
-			print("\nNada chama, o lo escribiste mal o google con eso")
-		else: 
-			print("\nResultados encontrados: " + str(counts))
-    
-    #agregar datos
-	elif eleccion_2 == "2" and el_boleano == False:
-		agrega_key = input("Agrega clave: ")
-		agrega_value = input ("Agrega descripcion: ")
-		subject[agrega_key] = agrega_value 
-		subject = [subject]
-		#agregando lo nuevo
-		with open(way, "w") as file_new:
-			json.dump(subject, file_new,indent=2)
-		print("Hecho chama")
-
-	else:
-		print("\nChama aclarate, o agregas o ves algo")
+		print("Chama no encuentro los J_sones.\n")
 		exit()
-		
-if __name__ == '__main__':
-	core_function('Python','1',['Funciones.json',False])
+
+	#agregar datos
+	if accion == 'Agregar':
+		#kargs
+		agg_key,agg_value = kargs['clave'],kargs['valor']
+		subject[agg_key] = agg_value
+		#agregando lo nuevo
+		with open(full_path, "w") as file_new:
+			json.dump([subject], file_new,indent=2)
+	
+	#testeo
+	elif accion == 'Testear':
+		randoms_keys,all_keys = [], list(subject.keys())
+		#si tiene 10 o menos claves lo devuelve directamente
+		if len(all_keys)<=10:
+			return all_keys
+		#else itera pickeando random
+		while len(randoms_keys)!=10:
+			key = random.choice(all_keys)
+			if key not in randoms_keys:
+				randoms_keys.append(key)
+		return randoms_keys
+
+	#la buscacion
+	else:
+		word = kargs['word'].replace(' ','').lower()
+		main_results,suggestions= {},{}
+        #parseandolo
+		for key,value in subject.items():
+			if word in key.lower():
+				main_results[key] = value
+			elif word in value.lower():
+				suggestions[key]=value
+		return main_results,suggestions
+
 	
 	
