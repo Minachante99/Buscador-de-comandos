@@ -19,23 +19,22 @@ def seleccionador(opciones,isFolder=0):
 		except FileNotFoundError:
 			print('No encuentro esa direccion.')
 			exit()
-	#printea las opciones y se encarga de que es correcta la seleccion
+	#printea las opciones y se encarga de que sea correcta la seleccion
 	for i,opt in enumerate(opciones):
 		print(f'{i+1}- {opt}')
-	rango= range(len(opciones))
 	while 1:
 		eleccion = input('\nSeleccione: ')
 		try:
 			eleccion = int(eleccion) - 1
-			if (eleccion) in rango: break
-			else :
-				print('\nAclarate papi.\n')
-				continue
+			if eleccion<0:
+				raise IndexError
+			return opciones[eleccion]
 		except ValueError:
 			if eleccion.lower() == 'exit' : exit()
 			else:
 				print('Tiene que ser un entero o la palabra "Exit" para salir.\n')
-	return opciones[eleccion]
+		except IndexError:
+			print('\nAclarate papi.\n')
 
 
 def main():
@@ -95,7 +94,8 @@ if __name__ == "__main__":
 		bdc.run()
 	elif menu == 'Update':
 		from Tools.Updater import updater
-		updater.main('D:\Programacion\Proyectos\Buscador de comandos\Modulos','https://raw.githubusercontent.com/Minachante99/Buscador-de-comandos/main/Modulos/')
+		mods_path = os.path.realpath('.') + os.sep + 'Modulos'
+		updater.main(mods_path,'https://raw.githubusercontent.com/Minachante99/Buscador-de-comandos/main/Modulos/')
 	elif menu == 'Version GUI':
 		print('En mantenimiento papiiiiiiii.Comiiiiiiiiiing Sooooooooooon')
 		exit()

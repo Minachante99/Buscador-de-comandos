@@ -1,1 +1,9 @@
-[{"px ": " absoluta.", "vw ": " relativa, se adapta al ancho de la pantalla grafica en porcentajes.", "vh ": " relativa, se adapta al alto de la pantalla grafica en porcentajes.", "em ": " relativa, se adapta al tama\u00f1o de la letra del elemento padre.", "rem": "relativa, se adapta a la resolucion del navegador."}]
+[
+    {
+        "px ": " absoluta.", 
+        "vw ": " relativa, se adapta al ancho de la pantalla grafica en porcentajes.", 
+        "vh ": " relativa, se adapta al alto de la pantalla grafica en porcentajes.", 
+        "em ": " relativa, se adapta al tama\u00f1o de la letra del elemento padre.", 
+        "rem": "relativa, se adapta a la resolucion del navegador."
+    }
+]

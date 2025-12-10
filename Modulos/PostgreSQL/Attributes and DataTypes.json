@@ -1,0 +1,19 @@
+[
+    {
+        "NOT NULL o NULL ": " especifica o no que puede estar vacio(default es Null).",
+        "PRIMARY KEY ": " clave principal,desde donde se enlaza otras tablas.", 
+        "FOREIGN KEY(clave)": " clave externa,para hacerlo en la misma linea usar REFERENCES \"nombre_dela_tabla\"(\"columna\").", 
+        "SERIAL": "el auto_increment de postgre.", 
+        "UNIQUE ": " que va a ser unico en la tabla.", 
+        "DEFAULT arg ": " si no se introduce parametros para esta columna se queda arg.", 
+        "ON DELETE (SET NULL) OR (CASCADE) ": " se usa en en las claves foreign para cuando se borre algo o bien setee a null o elimina todo lo que tiene que ver con esa clave en todas las tablas.",
+        "Data Types: " : "....................................... ",
+        "INTEGER ": " que sea un numero entero.", 
+        "DECIMAL(M,N) ": " numeros decimales, con M y N siendo la cant de digitos a la izquierda y la derecha respec.", 
+        "VARCHAR(arg) ": " texto, siendo opcional especificar la cantidad de caracteres maximo.", 
+        "TIMESTAMP ": " para guardar tiempo exacto en formato(Year-Month-Day Hora:Minutes:Seconds) con zona horaria('without time zone' para quitarsela).", 
+        "BLOB ": " datos binarios,como json e imagenes.", 
+        "CHAR(n)": "se usa cuando conoces el tama\u00c3\u00b1o exacto de los caracteres que se van a introducir.", 
+        "TEXT": "se usa para cantidades indefinidas de datos(es lento, asi que aclarate)."
+    }
+]

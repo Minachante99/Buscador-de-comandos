@@ -1,1 +1,31 @@
-[{"COUNT(\"arg\") ": " cuenta(...).", "AVG(\"arg\"\") ": " halla average.", "SUM(\"arg\") ": " halla la suma.", "CAST(\"\" as \"\")": " permite cambiar de tipo de datos.", "REPEAT('string', 'number_of_times')": "repite las cosas horizontal.", "GENERATE_SERIES('range','arg')": "genera verticalmente.", "RANDOM()": "crea filas unicas en un rango desde 0 - 1.0 (float).", "STRING_TO_ARRAY": "hace un split.", "UNNEST": "mete todo lo que esta spliteado en lineas.","DISTINCT(arg)": " permite seleccionar por unique."}]
+[
+  {
+    "COUNT(\"arg\") ": " cuenta cant de valores.",
+    "AVG(\"arg\"\") ": " halla average.",
+    "SUM(\"arg\") ": " halla la suma.",
+    "CAST(\"\" as \"\")": " permite cambiar tipo de datos.",
+    "REPEAT(arg, 'number_of_times')": "repite arg horizontalmente.",
+    "GENERATE_SERIES('range','arg')": "genera verticalmente.",
+    "RANDOM()": "devuele numeros en un rango desde 0 - 1.0 (float).",
+    "DISTINCT(arg)": " permite seleccionar por unique.",
+    "NOW()": "coge los datos horarios o fecha actual.",
+    "concat(arg,arg1)": "para concatenar arg-arg1.",
+    "strftime(arg,col)": "para seleccionar por fecha como str, en arg especificamos %m,%d,%y.",
+    "length(col) and char_length(col)": "devuelve los bytes y  cant de caract de cada string.",
+    "left(col,pos)": "seleccionar hasta el caracter en tal posicion,right lo mismo pero de derecha a izquierda.",
+    "ifnll(col,arg)": "a la hora de seleccionar permite especificar que si hay un valor nulo lo represente con arg.",
+    "date_add(date,'intervarl' date2 metric)": "turbiedad, para sumar dates, en metrica la parte que queremos sumar de ellas;datesub para resta.",
+    "datediff(date1,date2)": "devuelve la cant de dias de diferencia(MySQL).",
+    "dayofweek(date)": "devuelve que dia de la semana cae esa fecha, yendo desde sunday-1 hasta saturday-7. ",
+    "dayname(date)": "devuelve el dia de la semana en nombre(ex: Friday).",
+    "abs(col)": "devuelve el valor absoluto.",
+    "round(col)": "redondea.",
+    "ceil(col) and floor(col)": "redondean al integer mas cercano, mas alto o mas pequenos respectivamente.",
+    "sqrt(col)": "devuelve raiz cuadrada.",
+    "substring(col,ind1,ind2)": "selecciona los caracteres entre index1 e index 2 inclusivamente.",
+    "replace(col,arg,arg1)": "reemplaza todo arg por arg1 in esa columna.",
+    "upper() and lower()": "pone todo en mayusculas o minusculas.",
+    "fromat(arg)": "para convertir numeros a formato string #,###,###.",
+    "lfpad(arg,length,string)": "padea arg desde la izquierda, dandole un length de tamano con el string."
+  }
+]

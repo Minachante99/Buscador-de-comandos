@@ -48,7 +48,9 @@ def main(base_path,base_url):
                 os.remove(subj)
                 wget.download(url=link,out='.')
             #en mantenimiento,para dar mas informacion sobre el error
-            elif call.status_code!=200:
+            elif call.status_code>=500:
+                print(f'\nSomething went wrong with the server:( with {link}')
+            else :
                 print(f'\nSomething went wrong:( with {link}')
 
 

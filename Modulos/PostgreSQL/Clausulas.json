@@ -1,0 +1,17 @@
+[
+  {
+    "between # and #": "para especificar rango, arg entre esos dos.",
+    "xor": "operador, arg xor arg1 solo se cumple una.",
+    "like": "para experesiones regulares; %: cualquier numero de caracteres; _ : un caracter; ilike para case-insensitive.",
+    "union": "para unir los resultados de multiples selects,chapea repetidos;union all anade todo.",
+    "intersect": "selecciona los resultados que esten en ambas tablas.",
+    "except": "selecciona los resultados que esten en una pero no en la otra tabla.",
+    "case  when 'condition' then 'result' else 'other' end": "el if and else de sql.",
+    "using": "en los join, using col si la columna es comun en ambas tablas.",
+    "limit": "limita la cantidad de respuestas.",
+    "group by": "agrupa por distintos.",
+    "offset: salta el numero especificado de respue": "ffset: salta el numero especificado de respues.",
+    "having": "es como un where, pero se usa luego de agrupaciones.",
+    "order by arg desc": "para ordenar, distintas columnas van separadas por coma, asc es el default."
+  }
+]

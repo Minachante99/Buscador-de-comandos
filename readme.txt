@@ -12,4 +12,7 @@ mas adelante version github desde window), abrir el conversor o directamente la 
 .Agregada funcionalidad del testeo, que devuelve 10 claves aleatorias sobre el tema escogido.
 .Agregada funcionalidad de sugerencias a la hora de buscar, donde se muestran resultados 
 encontrados en los valores tambien y se mejoro la calidad a la hora de buscar.
-.Modulo 'DF and S methods(DataAnalysis expansion)' paso a llmarse 'DA_expansion'.
+.Agregado el script del updater a los tools, que transversa y actualiza los modulos.
+.Se actualizo y corrigieron los modulos. Modulo 'DF and S methods(DataAnalysis expansion)' 
+paso a llmarse 'DA_expansion'.Se unifico atributos y tipos de datos de postgres. Se creo otro modulo
+para las clapsulas.
