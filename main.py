@@ -74,10 +74,14 @@ def main():
 				print(f'\n{clave} : {valor}')
 		print(f'\nResultados encontrados: {len(results)}.\nSugerencias encontradas: {len(sugg)}.')
 	else:
-		#testear
+		#testear, 10 claves randoms y luego muestra todo el contenido
 		commands = cf(accion,full_path)
-		for com in commands:
+		for com in commands[0]:
 			print('\n' + com)
+		input('\n\nYa? ')
+		print('\n')
+		for clave,valor in commands[1].items():
+			print(f'\n{clave} : {valor}')
 
 
 if __name__ == "__main__":

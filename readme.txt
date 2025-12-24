@@ -16,3 +16,4 @@ encontrados en los valores tambien y se mejoro la calidad a la hora de buscar.
 .Se actualizo y corrigieron los modulos. Modulo 'DF and S methods(DataAnalysis expansion)' 
 paso a llmarse 'DA_expansion'.Se unifico atributos y tipos de datos de postgres. Se creo otro modulo
 para las clapsulas.
+.Ahora la parte de testear permite mostrar todos los resultados inmediatamente luego de mostrar los 10 aleatorios.

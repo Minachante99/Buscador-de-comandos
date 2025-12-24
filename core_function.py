@@ -33,7 +33,7 @@ carga el Json y busca dentro de las claves del diccionario o agrega datos"""
 			key = random.choice(all_keys)
 			if key not in randoms_keys:
 				randoms_keys.append(key)
-		return randoms_keys
+		return randoms_keys,subject
 
 	#la buscacion
 	else:
