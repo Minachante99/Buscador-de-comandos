@@ -16,7 +16,7 @@ carga el Json y busca dentro de las claves del diccionario o agrega datos"""
 	#agregar datos
 	if accion == 'Agregar':
 		#kargs
-		agg_key,agg_value = kargs['clave'],kargs['valor']
+		agg_key,agg_value = kargs['clave'].strip(),kargs['valor'].strip()
 		subject[agg_key] = agg_value
 		#agregando lo nuevo
 		with open(full_path, "w") as file_new:

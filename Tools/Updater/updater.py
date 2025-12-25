@@ -1,7 +1,20 @@
 """Script para actualizar los elementos de una carpeta desde el github mediante descarga directa.
 A futuro que la aplicacion determine OS y si es window que lo haga desde git."""
 
-import requests,os,wget
+import os
+for modulo in ['wget','requests']:
+    try:
+        exec(f'import {modulo}')
+    except ModuleNotFoundError:
+        print(f'\nNo se encontro el modulo {modulo}, voy a intentar instalarlo.Revisa que tengas internet.')
+        input('Presiona algo para continuar: ')
+        try:
+            os.system('pip install ' + modulo)
+            exec(f'import {modulo}')
+            print('Instalado!')
+        except:
+            print('Algo salio mal al intentar instalar, rechecka de nuevo fijate si tienes internet.')
+            exit()
 
 def main(base_path,base_url):
     """Funcion que transeversa una carpeta y va actualizando del link de github"""
@@ -42,7 +55,11 @@ def main(base_path,base_url):
         for subj in temas:
             link = base_url + mod + '/' + subj
             print(link)
-            call = requests.get(link,headers=headers,timeout=15)
+            try:
+                call = requests.get(link,headers=headers,timeout=15)
+            except:
+                print('Probablemente tengas un problema de internet. Rechecka e intentalo de nuevo.')
+                exit()
             if call.status_code==200:
                 print(f'\n{subj}: OK')
                 os.remove(subj)

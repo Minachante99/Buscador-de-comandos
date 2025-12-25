@@ -1,14 +1,14 @@
 [
   {
-    "len(arg) ": " devuelve cantidad de valores o caracteres de \"arg\".",
-    "sum(arg) ": " suma todos los valores en arg, que debe ser una lista.",
-    "exit() ": " termina el programa.",
-    "list(arg) ": " crea una lista, si arg es un string hace cada elemento un componente de la lista.",
-    "dict(**kargs) ": " crea un diccionario de la forma que cada karg=value.",
-    "tuple() ": " crea una tupla.",
-    "min(arg) and max(arg) ": " devuelve el valor minimo y maximo, se usa en listas;key= func para pasarle que tener en cuenta, como len o lambda or something.",
-    "open(path, arg) ": " abre archivo en path bajo un parametro \"r\"(lectura), \"w\"(escritura), \"a\",\"rb\" or \"wb\"(binario); para trabajar con archivos.",
-    "__init__ ": " overloading operator, el constructor en las classes, initiliza parametros.",
+    "len(arg)": "devuelve cantidad de valores o caracteres de \"arg\".",
+    "sum(arg)": "suma todos los valores en arg, que debe ser una lista.",
+    "exit()": "termina el programa.",
+    "list(arg)": "crea una lista, si arg es un string hace cada elemento un componente de la lista.",
+    "dict(**kargs)": "crea un diccionario de la forma que cada karg=value.",
+    "tuple()": "crea una tupla.",
+    "min(arg) and max(arg)": "devuelve el valor minimo y maximo, se usa en listas;key= func para pasarle que tener en cuenta, como len o lambda or something.",
+    "open(path, arg)": "abre archivo en path bajo un parametro \"r\"(lectura), \"w\"(escritura), \"a\",\"rb\" or \"wb\"(binario); para trabajar con archivos.",
+    "__init__": "overloading operator, el constructor en las classes, initiliza parametros.",
     "round(arg,#)": "redondea arg a la cantidad de digitos especificada en #; con -1 redonde a la izquierda de la coma.",
     "set(arg)": "acepta una lista como argumento, devuelve los valores como una colleccion de elementos unicos(chapea los repetidos) y de forma no ordenada);para agregarle parametros utilizar obj.add().",
     "isinstance(arg,A)": "toma por arg cualquier objeto y comprueba que este pertenezca a \"A\". Devuelve un booleano.",
@@ -25,7 +25,7 @@
     "__str__ and __repr__": "overloading operators, se encarga de pescar los prints y str, se usa como metodo en las clases, lo que esta funcion devuelva es lo que se printeastr y __repr__ es el default en modo interactivo.",
     "__getitem__": "overloading operator, pesca los index y slices, tambien los iteratos pero pa eso no sirve.",
     "iter(arg) and next(arg)": "para crear iterators manual, el arg in iter se convierte en un iterator que se puede atravesar a traves de next(), un loop manual, ellos llaman a __iter__ and __next__ reapecticamente.",
-    "__contains__": " overloading operator, se usa para membresia.",
+    "__contains__": "overloading operator, se usa para membresia.",
     "__getattr__": "overloading operapor, se utiliza para pescar atributos no definidos en la clase y no asociados a la instancia.",
     "__add__ and __sub__": "overloading operators, se utilizan para pescar la suma y la resta respect.",
     "__call__": "overloading operator, sirve para intercepter llamadas, sirve como una herramienta mas general, sin tener que definir un metodo nuevo.",
@@ -39,6 +39,6 @@
     "breakpoint()": "funcion que permite hacer una pausa en el codigo e interactuar con el, es para debuguear basicamente;con continue en la consola el programa se reanuda y exit lo termina.",
     "any(arg)": "le pasa bool(x) a todo los elementos del iterable y devuelve True si aunque sea hay un verdadero, False si no hay ninguno.",
     "all(arg)": "le pasa bool(x) a todos los elementos del iterable, devuelve True si todos son 1 o False si hay aunque sea un False.",
-    "reversed(arg)": "devuelve arg al reves, al contrario del metodo reverse este no devuelve none."
+    "reversed(arg)": "devuelve arg al reves, se usa en iterables."
   }
 ]

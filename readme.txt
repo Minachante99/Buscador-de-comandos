@@ -17,3 +17,7 @@ encontrados en los valores tambien y se mejoro la calidad a la hora de buscar.
 paso a llmarse 'DA_expansion'.Se unifico atributos y tipos de datos de postgres. Se creo otro modulo
 para las clapsulas.
 .Ahora la parte de testear permite mostrar todos los resultados inmediatamente luego de mostrar los 10 aleatorios.
+.Modificados los modulo, se elimino espacios en blancoooooo y otras impurezas ademas de agregada funcionalidad
+de que los limpie desde la hora de agregarlos.
+.Se modifico el updater, corrigiendo un problema de cuando no tiene internet y se le agrego robustez al programa
+checkando e ntlando los modulos wget an requests.
