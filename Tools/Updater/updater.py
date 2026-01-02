@@ -7,7 +7,7 @@ for modulo in ['wget','requests']:
         exec(f'import {modulo}')
     except ModuleNotFoundError:
         print(f'\nNo se encontro el modulo {modulo}, voy a intentar instalarlo.Revisa que tengas internet.')
-        input('Presiona algo para continuar: ')
+        input('Presiona enter para continuar: ')
         try:
             os.system('pip install ' + modulo)
             exec(f'import {modulo}')
