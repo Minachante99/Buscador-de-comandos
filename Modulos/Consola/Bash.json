@@ -23,6 +23,7 @@
     "wc": "permite contar las palabras de un archivo, -l devuelve la canidad de lineas de ese archivo.",
     "head or tail": "muestra las primeras o ultimas lineas de un archivo respectivamente.",
     "pip install 'nombre_del_paquete'": "instalador de paquetes de python; --upgrade nombre : actualiza el paquete.",
-    "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres"
+    "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres",
+    "pyqt6-tools designer": "para abrir el pyqt designer"
   }
 ]
