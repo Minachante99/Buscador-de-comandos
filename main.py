@@ -87,13 +87,15 @@ def main():
 
 if __name__ == "__main__":
 	#algo parecido a un menu, desde donde se puede lanzar el gui u otro tool, o proseguir con el bdc
+	curr_path = os.path.split(os.path.realpath(__file__))[0]
+	os.chdir(curr_path)
 	options = ['Buscador de Comandos','Version GUI','Update','Conversor']
 	print('A que vienes: \n')
 	menu = seleccionador(options)
 	if menu == 'Conversor':
 		#anade el path del convertidor al sys.path y lo inicia
 		from sys import path as sys_path
-		conv_path = os.path.abspath('.') + os.sep + 'Tools' + os.sep + 'Convertidor'  
+		conv_path = os.path.realpath('.') + os.sep + 'Tools' + os.sep + 'Convertidor'  
 		sys_path.append(conv_path)
 		import bdc_support_conversor as bdc
 		bdc.run()
