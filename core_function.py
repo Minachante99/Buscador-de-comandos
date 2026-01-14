@@ -1,4 +1,5 @@
-"""Script que contiene la core_function, la cual es usada por el main o el gui."""
+"""Script que contiene la core_function, la cual es usada por el main o el gui.Se encarga de cargar los json y 
+segun lo seleccionado guardar lo agregado o buscar y testear devolviendo los datos."""
 
 import json,random
 
@@ -17,6 +18,9 @@ carga el Json y busca dentro de las claves del diccionario o agrega datos"""
 	if accion == 'Agregar':
 		#kargs
 		agg_key,agg_value = kargs['clave'].strip(),kargs['valor'].strip()
+		#para que agregue un punto al final por si se olvida
+		if not agg_value.endswith('.'):
+			agg_value+='.'
 		subject[agg_key] = agg_value
 		#agregando lo nuevo
 		with open(full_path, "w") as file_new:

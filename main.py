@@ -17,9 +17,11 @@ def seleccionador(opciones,isFolder=0):
 			if not opciones:
 				print('Something went wrong.No archivos en esa carpeta.')
 				exit()
+			opciones.sort()
 		except FileNotFoundError:
 			print('No encuentro esa direccion.')
 			exit()
+		
 	#printea las opciones y se encarga de que sea correcta la seleccion
 	for i,opt in enumerate(opciones):
 		print(f'{i+1}- {opt}')

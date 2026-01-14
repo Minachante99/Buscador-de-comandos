@@ -20,4 +20,9 @@ para las clapsulas.
 .Modificados los modulo, se elimino espacios en blancoooooo y otras impurezas ademas de agregada funcionalidad
 de que los limpie desde la hora de agregarlos.
 .Se modifico el updater, corrigiendo un problema de cuando no tiene internet y se le agrego robustez al programa
-checkando e ntlando los modulos wget an requests.
+checkando e instalando los modulos wget an requests.
+.Se modifico para que se le agregue '.' al final de cada introduccion de datos si falta, y que ordena los resultados
+del listdir de los modulos.
+
+
+La version 2.0 saldra cuando al shino le salga del tubo hacer el gui.

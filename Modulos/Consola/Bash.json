@@ -24,6 +24,8 @@
     "head or tail": "muestra las primeras o ultimas lineas de un archivo respectivamente.",
     "pip install 'nombre_del_paquete'": "instalador de paquetes de python; --upgrade nombre : actualiza el paquete.",
     "net stop/stop postgresql-x64-v": "para iniciar/detener el server de postgres, en v ponermos la version de Postgres",
-    "pyqt6-tools designer": "para abrir el pyqt designer"
+    "pyqt6-tools designer": "para abrir el pyqt designer",
+    "conda activate": "para activar el ambiente de conda en un cmd normal; ir a C:\\Users\\<username>\\anaconda3\\condabin y usarlo. O directamente call \"C:\\Users\\Mina\\anaconda3\\condabin\\activate.bat\".",
+    "shell:startup": "no es precisamente un comando, solo lo puedo usar con window+r; abre la carpeta de los programas que inician con widnows, se le agregan como accesos directos."
   }
 ]

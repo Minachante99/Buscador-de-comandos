@@ -1,12 +1,12 @@
 [
   {
-    "import random": "modulo para elecciones pseudo-random; random.randint(range): selecciona un int in range; random.choice(arg): selecciona algo dentro arg; random.seed(arg): para agregar una semilla inicial.",
+    "import random": "modulo para elecciones pseudo-random; random.randint(range): selecciona un int in range; random.choice(arg): selecciona algo dentro arg; random.choices(arg,k=): para hacer k selecciones random en arg, devuelve una lista; random.seed(arg): para agregar una semilla inicial.",
     "import string": "para cosas con strings; string.punctuation: un str con los signos de puntuacion; string.ascii_upper(lower)case: devuelve el abecedario en mayuscula o minuscula.",
     "import math": "tallas matematicas; math.sin(arg) : halla el seno de arg; math.sqrt(arg) : halla raiz cuadrada de arg; math.pi: devuelve pi; math.ceil(arg) and math.floor(arg): roundean al integer mas cercano, mas alto o mas pequeno respectivamente.",
-    "import re": "para trabajar con regex; re.search(regex, variable) and re.findall(argumento, variable): devuelve uno o todos los elementos donde aparezca la regex; re.compile() - para compilar una regex y pasarselas a otras funciones.",
-    "import json": "para trabajar con jsons; json.dump(arg,file,indent=): guarda arg en  file,indent= separacion(2 o 4); json.load(file): lee file previamente cargado con open() y devuelve todo lo dentro del json.",
+    "import re": "para trabajar con regex; re.search(regex, arg) and re.findall(regex, arg): devuelve uno o todos los elementos donde aparezca la regex; re.compile() - para compilar una regex y pasarselas a otras funciones.",
+    "import json": "para trabajar con jsons; json.dump(arg,file,indent=): guarda arg en  file,indent= separacion(2 o 4); json.load(file): lee file previamente cargado con open() y devuelve todo lo dentro del json; re.split(regex,obj): splitea el archivo segun la regex, y devuelve el objeto ya spliteado.",
     "import sys": "se utiliza principalmente en programaci\u00f3n orientada al sistema(m\u00e1s sobre el tema en SystemProgramming).",
-    "import datetime": "para trabajar con fechas y horas; datetime.datetime.now() : retorna la fecha y hora actual; datetime.date() : acepta fechas para hacer calculos; datetime.date.today() : devuelve la fecha actual.",
+    "import datetime": "para trabajar con fechas y horas, el trabajo con date objects devuelve un objeto timedelta que tiene atributos parecidos como days and months; datetime.datetime.now() : retorna la fecha y hora actual; datetime.date() : acepta fechas para hacer calculos; datetime.date.today() : devuelve la fecha actual.",
     "import this": "el zen de python.",
     "import os": "Se utiliza en la programaci\u00f3n orientada al sistema(m\u00e1s sobre el tema en SystemProgramming).",
     "import multiprocessing": "es para levantar procesos independientes with Process. Mas en SystemProgramming.",
