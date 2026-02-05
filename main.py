@@ -1,6 +1,8 @@
 """"Un buscador de comandos dentro de mis apuntes. Segun las elecciones busca,testea,agrega contenido,actualiza o convierte nuevos json 
 la core_function."""
 
+# import os
+# print("El script se está ejecutando desde:", os.getcwd())
 
 from core_function import core_function as cf
 import os
