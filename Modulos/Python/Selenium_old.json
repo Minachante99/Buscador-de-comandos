@@ -1,0 +1,30 @@
+[
+  {
+    "selenium.webdriver.common.by.By": "para definir con que estructura se quiere localizar un elemento(By.XPATH,xpath).",
+    "selenium.webdriver.support.ui.WebDriverWait(driver,sec)": "para hacer esperas en selenium, en sec la cantidad de segundos maximos que puede esperar; wait_obj.until(condiciones) - para esperar a que pase algo. ",
+    "selenium.webdriver.support.expected_conditions": "principalmente se usa dentro de las esperas como condici\u00f3n de que aparezca algo; ec.visibility_of_element_located(path); ec.element_to_be_clickable(path); ec.alert_is_present(): para esperar por una alerta.",
+    "selenium.webdriver.common.keys.Keys": "clase para enviar claves especiales, como Keys.PAGE_DOWN para scrollear,se puede usar con cualquier elemento es solo un formalismo que haya que seleccionar algo.",
+    "driver_obj.get(page)": "se mueve a la pagina.",
+    "driver_obj.page_source": "devuelve todo el documento web y con suficiente tiempo ya habiendo ejecutado el javascript.",
+    "driver_obj.save_screenshot(nombre)": "hace un screenshot de la pantalla .",
+    "driver_obj.find_element(s)(metodo)": "para localizar elementos, con s al final devuelve una lista de todos los elementos que encajen.",
+    "driver_obj.quit() and driver.close()": "el primero cierra el navegador completo y el segundo solo la pestana actual. ",
+    "driver_obj.set_window_position(coord)": "para establecer las coordenadas del navegador en la pantalla.",
+    "driver_obj.get_cookies() and driver_obj.add_cookie()": "para guardar las cookies y cargar las cookies.",
+    "driver_obj.execute_script(script)": "para ejecutar javascript en el navegador,hasta ahora solo 'window_scrollTo(0,altura);' para hacer scroll hay que ir aumentando la altura, altura=document.body.scrollHeight para meterse hasta el final.",
+    "driver_obj.maximize_windows()": "para ponerlo en pantalla completa.",
+    "driver_obj.refresh()": "para actualizar pagina.",
+    "driver_obj.switch_to": "para cambiar el foco de atenci\u00f3n de selenium; .frame(iframe#) para cambiar a ese iframe; .deafult_content() para volver al contenido original; .window(id_pesta\u00f1a) para cambiar a tal pesta\u00f1a; .new_window(): crea una nueva pesta\u00f1a y brinca el foco automaticamente para ella.",
+    "driver_obj.window_handles and driver_obj.current_window_handle": "devuelve una lista de los id de las pestanas o devuelve el id de la pestana actual respect.",
+    "driver_obj.back()": "para ir a la pagina anterior.",
+    "driver_obj.set_window_size(width,height)": "para establecer tama\u00f1o de la ventana.",
+    "driver_obj.get_window_size()": "para obtener el size de la pantalla; devuelve un dicc con las claves width and height para ancho o altura.",
+    "element_obj.shadow_root": "para seleccionar el shadow root dentro de un elemento, recordar que solo se puede recorrer con css selectors.",
+    "element_obj.get_attribute(tag)": "para extraer el atributo que queramos.",
+    "element_obj.clear()": "para limpiar cajas de texto.",
+    "element_obj.click()": "para clickear botones.",
+    "element_obj.send_keys(texto)": "para enviar texto por ejemplo para rellenar loggins.",
+    "alert_element.accept() and alert_element.dissmis()": "para aceptarla o cancelarla",
+    "selenium.webdriver.common.action_chains.ActionChains()": "clase para simular humanidad con el raton o el mouse; inst.move_to_element(elem): se mueve a ese elem; inst.perform(): realiza todo lo acumulado."
+  }
+]

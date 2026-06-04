@@ -39,6 +39,7 @@
     "df.plot(kind='hexbin')": "crea un hexagonal binning que se usa como un scatterplot para comparar dos variables num\u00e9ricas pero para cuando hay demasiados datos que no se hace legible un scatter, poniendo como puntos de presi\u00f3n representando los bins como hex\u00e1gonos describiendo la cantidad de puntos que contiene.",
     "df.to_json()": "salva el dataframe a json.",
     "inst.sum()": "para sumar, axis=1 para hacerlo horizontalmente.",
-    "s.pct_change()": "devuelve el cambio en porciento sucesivamente entre uno y el anterior."
+    "s.pct_change()": "devuelve el cambio en porciento sucesivamente entre uno y el anterior.",
+    "df.tolist()": "para convertir a lista el resultado."
   }
 ]
